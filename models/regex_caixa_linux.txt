@@ -1,0 +1,6 @@
+^[\s\S]*?(intime(?:-se|m-se) a(?:s)? parte ré para que apresente(?:m)? contrarrazões ao recurso interposto pela parte contrária\.)[\s\S]*$	##Preserva apenas a expressão sobre contrarrazões
+[\s\S]*?(?=S E N T E N Ç A)	##Remove informações de cabeçalho até "S E N T E N Ç A" (incluindo quebras de linha)
+[\s\S]*?(?=DESPACHO)	##Remove informações de cabeçalho até "DESPACHO" (incluindo quebras de linha)
+Com o trânsito em julgado, providencie a Secretaria a comunicação ao réu.*	##Remove frases de encerramento sobre trânsito em julgado
+Após, retornem conclusos.*	##Remove frases de encerramento sobre retorno dos autos
+^[\s\S]*?(Publique-se\.\s*Intimem-se\.)([\s\S]*)$	##Remove o texto posterior à expressão "Publique-se. Intimem-se."
